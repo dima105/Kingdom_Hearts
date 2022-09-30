@@ -18,11 +18,21 @@ $fontSize:100px;
 
 .header_block{
   grid-row: 1;
+  display: flex;
+  justify-content:space-between;
   background-color:rgba(56, 51, 51, 0.904);
 
+  .main_logo{
+    height: 50px;
+    width: 100px;
+    &:hover{
+      transition-duration: 10000ms;
+      transform: rotateY(360deg);
+    }
+  }
+
   .navigation{
-    display: flex;
-    margin-left: 15%;  
+    display: flex; 
   
     .nav_list{
       flex: 3 1 auto;
@@ -33,7 +43,7 @@ $fontSize:100px;
       font-size: $fontSize/4;
       gap: 3px;
 
-      @media (max-width:500px) {
+      @media (max-width:750px) {
         display: none;
       }
     }

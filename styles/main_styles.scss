@@ -25,29 +25,32 @@ $fontSize:100px;
   .main_logo{
     height: 50px;
     width: 100px;
+    display: flex;
+    align-items: center;
     &:hover{
       transition-duration: 10000ms;
       transform: rotateY(360deg);
     }
   }
 
-  .navigation{
-    display: flex; 
-  
-    .nav_list{
-      flex: 3 1 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content:space-evenly;
-      list-style-type: none;
-      font-size: $fontSize/4;
-      gap: 3px;
+.navigation{
+  display: grid;
+  align-items: center;
+}
 
-      @media (max-width:750px) {
-        display: none;
-      }
+  .nav_list{
+    flex: 3 1 auto;
+    display: flex;
+    list-style-type: none;
+    font-size: $fontSize/4;
+    margin-bottom: 0;
+    gap: 3px;
+
+    @media (max-width:770px) {
+      display: none;
     }
-  } 
+  }
+
   
   .link{
     display: flex;
@@ -99,6 +102,7 @@ $fontSize:100px;
 .main_block{
   grid-row: 2;
   display: flex; 
+  flex-direction: column;
   background-image: url(../images/images_from_main_pages/wallpaper.jpg);
   background-size:25%; 
   position: relative;
@@ -107,12 +111,32 @@ $fontSize:100px;
 
   .title{
     text-align: center;
-    margin: 100px;
+    margin: 10px;
     font-size: $fontSize;
     color: rgb(209, 223, 236);
   
     @media (max-width:600px){
         font-size: $fontSize - 40px;
+    }
+  }
+
+  .main_logo,
+  .setting_main_image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    width: 50%;
+    height: auto;
+    @media (max-width:1200px){
+      width: 600px;
+    }
+
+    @media (max-width:900px){
+      width: 400px;
+    }
+
+    @media (max-width:600px){
+      width: 300px;
     }
   }
   
@@ -131,7 +155,7 @@ $fontSize:100px;
     color: rgb(222, 237, 240);
   
     @media (max-width:600px){
-        font-size: $fontSize -60px;
+        font-size: $fontSize - 60px;
     }
   }
   
@@ -161,6 +185,87 @@ $fontSize:100px;
     align-items: center;
     gap: 50px;
   }
+
+  .quote{
+    font-size: $fontSize/4;
+    color: #c0dcf8;
+  }
+
+  .controls{
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    width: 200px;
+    margin-bottom: 50px;
+  }
+}
+
+.carousels{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 3px;
+  
+  .column_two_corusels{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 3px;
+  
+    @media (max-width:800px) {   
+      width: 80%;
+   
+    }
+  }
+}
+
+.border-left-up-carousel{
+  border-radius: 150px 0 0;
+}
+
+.border-left-down-carousel{
+  border-radius: 0 0 0 150px;
+}
+
+.border-right-up-carousel{
+  border-radius: 0 150px 0 0;
+}
+
+.border-right-down-carousel{
+  border-radius: 0 0 150px 0;
+}
+
+.border-left-up-carousel,
+.border-middle-up-carousel,
+.border-right-up-carousel{
+  @media (max-width:800px) {
+    border-radius: 150px 150px 0 0;
+  }
+}
+
+.border-left-down-carousel,
+.border-middle-down-carousel,
+.border-right-down-carousel{
+  @media (max-width:800px) {
+    border-radius: 0 0 150px 150px;
+  }
+}
+
+.gif_image{
+  display: block;
+  float: left; 
+  padding: 10px ; 
+  width: 20%;
+  height: auto;
+  border-radius: 20%;
+}
+
+.setting_main_image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto ;
 }
 
 .footer_block{
@@ -198,4 +303,20 @@ $fontSize:100px;
     align-items: center;
     font-size: $fontSize/5;
   }
+}
+
+.landguru{
+  display: grid;
+  grid-row: 1fr auto;
+  background-image: url(/images/pattern_landguru.png);
+  background-color: black;
+  background-size: 100%;
+  height: auto;
+  border-radius: 0 0 15%;
+
+}
+
+.table{
+  grid-row: 2;
+  border: 2px solid green;
 }

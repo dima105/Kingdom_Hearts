@@ -142,7 +142,7 @@ $fontSize:100px;
   
   .section{
     margin: 2%;
-    background: radial-gradient(circle at bottom right, rgb(101, 100, 116) 0%, rgb(41, 42, 46) 100%);
+    background: radial-gradient(circle at bottom right, rgba(146, 126, 235, 0.993) 0%, rgb(41, 42, 46) 100%);
     border: 2px solid rgb(113, 107, 114);
     border-radius: 150px;
     padding:0 0 1% 1%;
@@ -214,7 +214,7 @@ $fontSize:100px;
     width: 30%;
     gap: 3px;
   
-    @media (max-width:800px) {   
+    @media (max-width:750px) {   
       width: 80%;
    
     }
@@ -240,7 +240,7 @@ $fontSize:100px;
 .border-left-up-carousel,
 .border-middle-up-carousel,
 .border-right-up-carousel{
-  @media (max-width:800px) {
+  @media (max-width:750px) {
     border-radius: 150px 150px 0 0;
   }
 }
@@ -248,7 +248,7 @@ $fontSize:100px;
 .border-left-down-carousel,
 .border-middle-down-carousel,
 .border-right-down-carousel{
-  @media (max-width:800px) {
+  @media (max-width:750px) {
     border-radius: 0 0 150px 150px;
   }
 }
@@ -308,7 +308,7 @@ $fontSize:100px;
 .landguru{
   display: grid;
   grid-row: 1fr auto;
-  background-image: url(/images/pattern_landguru.png);
+  background-image: url(/images/images_from_main_pages/pattern_landguru.png);
   background-color: black;
   background-size: 100%;
   height: auto;
